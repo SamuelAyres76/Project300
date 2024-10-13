@@ -16,3 +16,11 @@ npm run build-mobile
 Serve:
 npm run serve-mobile
 ```
+🖥️ Desktop
+```
+Serve (development):
+ng build && electron .
+
+Package (production):
+electron-packager ./ TimetableApplication --platform=win32 --overwrite
+```

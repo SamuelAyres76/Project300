@@ -1,6 +1,7 @@
 {
   "name": "timetable-application",
   "version": "0.0.0",
+  "main": "electron-config.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -8,7 +9,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "build-mobile": "ng build && npx cap sync",
-    "serve-mobile": "ng build && npx cap sync && npx cap open android"
+    "serve-mobile": "ng build && npx cap sync && npx cap open android",
+    "serve-electron": "ng build && electron .",
+    "package-electron-win": "electron-packager ./ TimetableApplication --platform=win32 --overwrite"
   },
   "private": true,
   "dependencies": {
@@ -24,6 +27,8 @@
     "@capacitor/cli": "^6.1.2",
     "@capacitor/core": "^6.1.2",
     "@capacitor/ios": "^6.1.2",
+    "electron": "^32.2.0",
+    "electron-packager": "^17.1.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
