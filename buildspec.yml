@@ -3,13 +3,12 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 10
+      nodejs: 22
     commands:
-      - npm i
+      - echo "Installing node"
+      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
   build:
     commands:
-      - echo "Installing node packages"
-      - npm i
       - echo "Build angular application"
       - ng build
       - echo "Sync with angular application"
