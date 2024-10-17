@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  build:
+    commands:
+      - echo "Installing node packages"
+      - npm i
+      - echo "Build angular application"
+      - ng build
+      - echo "Sync with angular application"
+      - npx cap sync
