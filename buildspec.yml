@@ -6,7 +6,8 @@ phases:
       nodejs: 22
     commands:
       - echo "Installing node"
-      - curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+      - echo "Install node modules"
+      - npm i
   build:
     commands:
       - echo "Build angular application"
